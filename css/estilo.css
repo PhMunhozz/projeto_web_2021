@@ -1,0 +1,128 @@
+/*Estilo para todo o documento*/
+body {
+    margin: 0; padding: 0;
+    background-color: #f0f0f0;
+}
+main {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*Deixar conteúdos espaçados e distantes da borda*/
+.flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%
+}
+
+/*Deixar texto centralizado*/
+.txt-center {
+    text-align: center;
+}
+
+/*Estilos do cabeçalho*/
+.cabecalho {
+    align-items: center;
+}
+header {
+    background-color: #000;
+    font-family: Garamond;
+    color: #fff;
+    width: 100%
+}
+header nav .lista-menu {
+    list-style: none;
+}
+.lista-menu li {
+    display: inline-flex;
+}
+.lista-menu li:not(:last-child){
+    margin-right: 25px
+}
+.lista-menu li:hover{
+    cursor: pointer;
+    color: #ccc
+}
+
+
+/*Estilo padrão das colunas*/  
+.coluna {
+    padding: 10px 5px 30px 5px;
+    flex: 1;    
+}
+
+
+/*Estilo padrão para os h2*/
+h2 {
+    text-align: center;
+}
+
+/*Estilo do formulário da primeira coluna*/
+.form-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input[type="text"], input[type="email"] {
+    width: 50%;
+    height: 30px;
+}
+input, textarea {
+    margin-bottom: 10px;
+}
+textarea {
+    width: 50%;
+    resize: none;
+}
+input[type="submit"]{
+    padding: 5px 20px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 15px;
+    transition: ease 1s;
+
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: black;
+    transition: ease 1s;
+    border: 1px solid black;
+
+}
+
+/* Estilos da tabela */
+table {
+    font-size: 1rem;
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #000;
+  color: white;
+}
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+/* tr:nth-child(odd){
+    background-color: #dcdcdc;
+} */
+td:hover {
+    background-color: #d8d8d8;
+    cursor: pointer;
+}
+
+/*Estilo do rodapé da página*/
+footer {
+    font-size: small;
+    color: white;
+    overflow: auto;
+    background-color: #000;
+    clear: both;
+}
