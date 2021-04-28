@@ -38,7 +38,11 @@ header nav .lista-menu {
 .lista-menu li:not(:last-child){
     margin-right: 25px
 }
-.lista-menu li:hover{
+.lista-menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+.lista-menu li a:hover{
     cursor: pointer;
     color: #ccc
 }
@@ -97,7 +101,10 @@ input[type="submit"]:hover{
 table {
     font-size: 1rem;
     border-collapse: collapse;
-    width: 100%;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10px
+
 }
 th {
   padding-top: 12px;
@@ -120,6 +127,10 @@ td:hover {
 
 /*Estilo do rodapé da página*/
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     font-size: small;
     color: white;
     overflow: auto;

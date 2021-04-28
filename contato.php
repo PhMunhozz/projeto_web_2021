@@ -20,10 +20,9 @@
                 <h1>PhMunhozz</h1>
                 <nav>
                     <ul class="lista-menu">
-                        <li>Home</li>
-                        <li>Informações</li>
-                        <li>Contatos</li>
-                        <li>Localização</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="contato.php">Contato</a></li>
+                        <li><a href="processar.php">Tabela</a></li>
                     </ul>
                 </nav>
             </div>
@@ -35,10 +34,10 @@
                 <form id="form" method="POST" action="processar.php">
                     <h2>Formulário de Contato</h2>
                     <div class="form-flex">
-                        <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
-                        <input type="email" name="email" id="email" placeholder="Digite seu email...">
-                        <input type="text" name="contato" id="contato" placeholder="Digite seu contato...">
-                        <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem..."></textarea>
+                        <input type="text" name="nome" id="nome" placeholder="Digite seu nome..." required>
+                        <input type="email" name="email" id="email" placeholder="Digite seu email..." required>
+                        <input type="text" name="contato" id="contato" placeholder="Digite seu contato..." required>
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem..." required></textarea>
                         <input type="submit" value="Cadastrar">
                     </div>
                 </form>
