@@ -4,12 +4,20 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-if (!empty($_POST)) {
+session_start();
 
+if (empty($_POST) && empty($_SESSION)) {
+    header('Location: contato.php');
+}
+
+// var_dump($_SESSION);
+
+if (!empty($_POST)) {
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $contato = $_POST["contato"];
     $mensagem = $_POST["mensagem"];
+    $_SESSION["dados"][] = $_POST;
 }
 
 ?>
@@ -19,7 +27,8 @@ if (!empty($_POST)) {
 <head>
 
     <title>Tabela</title>
-    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/estilo.css" />
+    <script type="text/javascript" src="../../js/script.js"></script>
 
 </head>
 
@@ -32,7 +41,7 @@ if (!empty($_POST)) {
                 <ul class="lista-menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="contato.php">Contato</a></li>
-                    <li>Tabela</li>
+                    <li><a href="processar.php">Tabela</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,24 +49,29 @@ if (!empty($_POST)) {
 
     <table>
         <tr>
-            <?php
-            foreach ($_POST as $chave => $valor) {
-            ?>
-                <th><?= ucfirst($chave) ?></th>
-            <?php
-            }
-            ?>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Mensagem</th>
         </tr>
-        <tr>
-            <?php
-            foreach ($_POST as $valor) {
-            ?>
-                <td><?= $valor ?></td>
-            <?php
-            }
-            ?>
-        </tr>
+        <?php
+        foreach ($_SESSION["dados"] as $valor_dados) {
+        ?>
+            <tr>
+                <?php
+                foreach ($valor_dados as $valor) {
+                ?>
+                    <td><?= $valor ?></td>
+                <?php
+                }
+                ?>
+            </tr>
+        <?php
+        }
+        ?>
     </table>
+    <br>
+    <a href="limpar_sessao.php">Limpar sessão</a>
 
     <footer>
         <p class="flex">Entre em contato:<br>paulo.munhoz@aluno.unincor.edu.br</p>
