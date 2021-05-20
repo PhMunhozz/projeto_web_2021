@@ -1,9 +1,7 @@
 <?php
 
-session_start();
+unset($_SESSION["dados"]);
 
-session_destroy();
-
-header('Location: contato.php');
+header('Location: ?pg=contato/formulario');
 
 ?>
