@@ -4,6 +4,8 @@ body {
     background-color: #f0f0f0;
 }
 main {
+    min-height: 67.6%;
+    text-align: center;
     font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -46,8 +48,10 @@ header nav .lista-menu {
     cursor: pointer;
     color: #ccc
 }
-
-
+a{
+    text-decoration: none;
+    color: #000;
+}
 /*Estilo padrão das colunas*/  
 .coluna {
     padding: 10px 5px 30px 5px;
@@ -125,9 +129,60 @@ td:hover {
     cursor: pointer;
 }
 
+
+#btn-limpar-sessao{
+    margin: 20px auto;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    width: 100px;
+    display: table;
+    height: 35px;
+    transition: ease 1s;
+}
+
+#btn-limpar-sessao a{
+    padding: 5px 20px;
+    font-size: 15px;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#btn-limpar-sessao:hover{
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: black;
+    transition: ease 1s;
+    border: 1px solid black;
+}
+
+#btn-limpar-sessao a:hover{
+    color:black
+}
+
+.msg_cadastro_contato {
+    margin: 10px auto;
+    padding: 5px;
+    width: 20%;
+}
+
+.msg_cadastro_sucesso {
+    border: 1px solid #4eb54e;
+    border-radius: 5px;
+    background: #4eb54e;
+    color: white;
+}
+
+.msg_cadastro_erro {
+    border: 1px solid red;
+    border-radius: 5px;
+    background: red;
+    color: white;
+}
+
 /*Estilo do rodapé da página*/
 footer {
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -137,3 +192,4 @@ footer {
     background-color: #000;
     clear: both;
 }
+
